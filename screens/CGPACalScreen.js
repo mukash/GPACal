@@ -8,15 +8,16 @@ import {
 } from 'react-native';
 
 const CGPACalScreen = () => {
-  const [ITCP, setITCP] = useState(0);
-  const [CCN, setCCN] = useState(0);
-  const [ML, setML] = useState(0);
-  const [NS, setNS] = useState(0);
+  const [sem1Creds, setSem1Creds] = useState(0);
+  const [sem2Creds, setSem2Creds] = useState(0);
+  const [sem3Creds, setSem3Creds] = useState(0);
+  const [sem4Creds, setSem4Creds] = useState(0);
 
-  const [obtainITCP, setObtainITCP] = useState(0);
-  const [obtainCCN, setObtainCCN] = useState(0);
-  const [obtainML, setObtainML] = useState(0);
-  const [obtainNS, setObtainNS] = useState(0);
+  // const [sem1Creds, setSem1Creds] = useState(0);
+  // const [sem2Creds, setSem2Creds] = useState(0);
+  // const [sem3Creds, setSem3Creds] = useState(0);
+  // const [sem4Creds, setSem4Creds] = useState(0);
+
   const [result, setResult] = useState(0);
   const calculateGPA = () => {
     let weightedGradePoints =
@@ -32,7 +33,7 @@ const CGPACalScreen = () => {
     <View style={styles.container}>
       <View style={styles.contentWrapper}>
         <View style={styles.textWrapper}>
-          <Text style={styles.subName}>ITCP</Text>
+          <Text style={styles.subName}>sem 1</Text>
         </View>
         <View style={styles.inputFields}>
           <TextInput
@@ -59,7 +60,7 @@ const CGPACalScreen = () => {
       </View>
       <View style={styles.contentWrapper}>
         <View style={styles.textWrapper}>
-          <Text style={styles.subName}>CCN</Text>
+          <Text style={styles.subName}>sem 2</Text>
         </View>
         <View style={styles.inputFields}>
           <TextInput
@@ -84,7 +85,7 @@ const CGPACalScreen = () => {
       </View>
       <View style={styles.contentWrapper}>
         <View style={styles.textWrapper}>
-          <Text style={styles.subName}>ML</Text>
+          <Text style={styles.subName}>sem 3</Text>
         </View>
         <View style={styles.inputFields}>
           <TextInput
@@ -109,7 +110,7 @@ const CGPACalScreen = () => {
       </View>
       <View style={styles.contentWrapper}>
         <View style={styles.textWrapper}>
-          <Text style={styles.subName}>NS</Text>
+          <Text style={styles.subName}>sem 4</Text>
         </View>
         <View style={styles.inputFields}>
           <TextInput

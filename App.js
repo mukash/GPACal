@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import HomeScreen from './screens/HomeScreen';
 import GPACalScreen from './screens/GPACalScreen';
 import CGPACalScreen from './screens/CGPACalScreen';
-
+import RNBootSplash from 'react-native-bootsplash';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 function App() {
+  useEffect(() => {
+    //GlobalFont.applyGlobal('GESSTwoMedium-Medium');
+    const splashTime = setTimeout(() => {
+      RNBootSplash.hide({fade: true});
+    }, 1000);
+    return () => {
+      clearTimeout(splashTime);
+    };
+  }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerTitleAlign: 'center'}}>
